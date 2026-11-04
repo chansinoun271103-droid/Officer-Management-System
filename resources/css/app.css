@@ -1,0 +1,255 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles (Updated to match Login blue theme) */
+.side {
+    width: 240px;
+    background-color: #2563eb;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    padding-left: 8px;
+    color: #ffffff;
+}
+
+.nav {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.nav:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav.on {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+
+/* Logout Form & Button inside Sidebar */
+.side form {
+    margin-top: 0;
+}
+
+.logout {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.logout:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Bottom User Badge */
+.badge {
+    margin-top: auto;
+    background-color: #1d4ed8;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+/* Main Content Area */
+.main {
+    flex: 1;
+    padding: 32px;
+}
+
+.main h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #0f172a;
+}
+
+/* Top Stat Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.card .label {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.card .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* Dashboard Panels (2 Columns Layout) */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.panel {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.panel h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+/* Department Progress Bars */
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 0.85rem;
+}
+
+.bar-name {
+    width: 60px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.bar-track {
+    flex: 1;
+    height: 10px;
+    background-color: #f1f5f9;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #2563eb;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.bar-row b {
+    width: 20px;
+    text-align: right;
+    color: #0f172a;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+.btn.ghost {
+    background-color: #ffffff;
+    color: #2563eb;
+    border: 1px solid #cbd5e1;
+}
+
+.btn.ghost:hover {
+    background-color: #f8fafc;
+    border-color: #2563eb;
+}
